@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/main/index.html")); // load main
 });
 app.get("/aboutme", (req, res) => {
-  res.sendFile(path.join(__dirname, ".views/aboutMe/index.html"));
+  res.sendFile(path.join(__dirname, "./views/aboutMe/index.html"));
 });
 // Use the router for handling routes
 app.use("/", indexRouter);
