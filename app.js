@@ -6,8 +6,12 @@ const app = express();
 const PORT = 3000;
 
 // Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, "public")));
-
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/main/index.html")); // load main
+});
+app.get("/aboutme", (req, res) => {
+  res.sendFile(path.join(__dirname, ".views/aboutMe/index.html"));
+});
 // Use the router for handling routes
 app.use("/", indexRouter);
 
