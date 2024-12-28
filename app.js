@@ -5,12 +5,18 @@ const indexRouter = require("./routes/index");
 const app = express();
 const PORT = 3000;
 
+let viewers = 0;
+
 // Serve static files from the "public" directory
 app.get("/", (req, res) => {
+  viewers += 1;
   res.sendFile(path.join(__dirname, "./views/main/index.html")); // load main
 });
 app.get("/aboutme", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/aboutMe/index.html"));
+});
+app.get("/viewers", (req, res) => {
+  res.json({ viewers: viewers });
 });
 // Use the router for handling routes
 app.use("/", indexRouter);
