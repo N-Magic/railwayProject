@@ -15,6 +15,9 @@ app.get("/", (req, res) => {
 app.get("/aboutme", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/aboutMe/index.html"));
 });
+app.get("/teaching", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/teaching/index.html"));
+});
 app.get("/viewers", (req, res) => {
   res.json({ viewers: viewers });
 });
