@@ -2,7 +2,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 
 const url =
-  "https://connect2concepts.com/connect2/?type=bar&key=2f852228-dca5-4073-bc3b-cf378f4d0e31";
+  "https://www.connect2mycloud.com/Widgets/Data/locationCount?type=circle&key=2f852228-dca5-4073-bc3b-cf378f4d0e31";
 
 axios
   .get(url)
