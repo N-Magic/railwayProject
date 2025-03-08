@@ -21,6 +21,9 @@ app.get("/teaching", (req, res) => {
 app.get("/viewers", (req, res) => {
   res.json({ viewers: viewers });
 });
+app.get("/scouting", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/scouting/index.html"));
+});
 // Use the router for handling routes
 app.use("/", indexRouter);
 

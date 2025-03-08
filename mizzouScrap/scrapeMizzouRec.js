@@ -8,11 +8,11 @@ axios
   .get(url)
   .then((response) => {
     const html = response.data; // Axios stores the response HTML in `data`
-
+    console.log(html);
     // Load the HTML into cheerio
     const $ = cheerio.load(html);
     // Select all elements with the class 'barChart', map over them, and take the first two lines of text from each
-    var barChartTexts = $(".barChart")
+    var barChartTexts = $(".circleChart")
       .map(function () {
         var lines = $(this).text().split("\n"); // Split the text by new lines
         return lines
